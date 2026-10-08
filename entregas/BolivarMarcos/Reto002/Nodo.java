@@ -1,11 +1,11 @@
 package entregas.BolivarMarcos.Reto002;
 
-public class Nodo {
+class Nodo {
 
     int dato;
 
     Nodo siguiente;
-
+s
     public Nodo(int dato) {
         this.dato = dato;
         this.siguiente = null;
