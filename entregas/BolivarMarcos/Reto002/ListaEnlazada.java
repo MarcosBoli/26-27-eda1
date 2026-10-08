@@ -16,4 +16,20 @@ class ListaEnlazada {
         }
         System.out.println("null");
     }
+
+    public void insertarEnPosicion(int posicion, int dato) {
+        Nodo dummy = new Nodo(-1);
+        dummy.siguiente= cabeza;
+        Nodo actual= dummy;
+        int pasos=0;
+        while (actual.siguiente != null && pasos < posicion) {
+            actual = actual.siguiente;
+            pasos++;
+        }
+        Nodo nuevoNodo = new Nodo(dato);
+        nuevoNodo.siguiente = actual.siguiente;
+        actual.siguiente= nuevoNodo;
+        cabeza= dummy.siguiente;
+
+    }
 }
