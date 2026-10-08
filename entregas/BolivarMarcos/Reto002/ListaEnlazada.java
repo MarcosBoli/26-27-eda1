@@ -32,4 +32,21 @@ class ListaEnlazada {
         cabeza= dummy.siguiente;
 
     }
+
+    public void eliminarRepetidos() {
+        Nodo dummy = new Nodo(-1);
+        dummy.siguiente= cabeza;
+        Nodo actual= dummy;
+        while (actual.siguiente != null && actual.siguiente.siguiente != null) {
+            if (actual.siguiente.dato == actual.siguiente.siguiente.dato){
+                int valor= actual.siguiente.dato;
+                while (actual.siguiente != null && actual.siguiente.dato == valor) {
+                    actual.siguiente = actual.siguiente.siguiente;
+                }
+            }else {
+                actual= actual.siguiente;
+            }
+        }
+        cabeza= dummy.siguiente;
+    }
 }

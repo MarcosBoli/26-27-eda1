@@ -5,6 +5,8 @@ public class Main  {
     public static void main(String[] args) {
         ListaEnlazada lista = crear (new int[] { 1, 1, 2, 3, 3, 4 });
         lista.imprimirLista();
+        lista.eliminarRepetidos();
+        lista.imprimirLista();
 
         ListaEnlazada vacia = crear(new int[] {});
         vacia.imprimirLista();
